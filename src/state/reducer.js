@@ -4,7 +4,7 @@ import {
     STORIES_PLAN_START_ERROR,
     STORIES_GROUPED_PLAN_START,
     STORIES_GROUPED_PLAN_START_SUCCESS,
-    STORIES_GROUPED_PLAN_START_ERROR,
+    STORIES_GROUPED_PLAN_START_ERROR, GROUP_PRODUCTS, CHANGE_PAGE,
 } from './types';
 
 const initialState = {
@@ -46,12 +46,12 @@ export default function reducer(state = initialState, action) {
                 loading: false,
                 error: action.payload,
             };
-        case 'GROUP_PRODUCTS':
+        case GROUP_PRODUCTS:
             return {
                 ...state,
                 products: action.payload,
             };
-        case 'CHANGE_PAGE':
+        case CHANGE_PAGE:
             return {
                 ...state,
                 page: action.payload,

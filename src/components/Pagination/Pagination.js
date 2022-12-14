@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import {CHANGE_PAGE} from "../../state/types";
 
 const Pagination = () => {
     const page = useSelector(state => state.page);
@@ -9,7 +10,7 @@ const Pagination = () => {
 
     const handlePageChange = page => {
         dispatch({
-            type: 'CHANGE_PAGE',
+            type: CHANGE_PAGE,
             payload: page,
         });
     };
