@@ -4,6 +4,7 @@ import { loadTopstories, fetchStoryById } from '../../state/actions';
 import Pagination from '../Pagination/Pagination';
 import {getItemsPerPage, getPage, getProducts, getResults} from "../../state/selectors";
 import NewsListEntry from "../NewsListEntry/NewsListEntry";
+import Loading from "../Loading/Loading";
 
 const NewsList = () => {
     const results = useSelector(getResults);
@@ -26,9 +27,12 @@ const NewsList = () => {
         dispatch(fetchStoryById(results, page, itemsPerPage));
     }
 
-    if (Object.keys(products).length === 0) {
-        return <p>Loading...</p>;
+
+
+    if (products && Object.values(products).every(item => item === null)) {
+        return <Loading/>
     }
+
 
     return (
         <div>

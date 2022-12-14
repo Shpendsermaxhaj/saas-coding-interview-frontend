@@ -24,13 +24,13 @@ const Pagination = () => {
             </button>
             <button
                 onClick={() => handlePageChange(page + 1)}
-                disabled={page === Math.ceil(results.length / itemsPerPage)}
+                disabled={page === Math.ceil(results?.length / itemsPerPage)}
             >
                 Next page
             </button>
             <button
-                onClick={() => handlePageChange(Math.ceil(results.length / itemsPerPage))}
-                disabled={page === Math.ceil(results.length / itemsPerPage)}
+                onClick={() => handlePageChange(Math.ceil(results?.length / itemsPerPage))}
+                disabled={page === Math.ceil(results?.length / itemsPerPage)}
             >
                 Last Page
             </button>

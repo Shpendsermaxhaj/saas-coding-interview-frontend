@@ -19,7 +19,7 @@ describe('stories reducer', () => {
             data: [],
             page: 1,
             itemsPerPage: 10,
-            products: [],
+            products: {},
         };
 
         expect(reducer(undefined, action)).toEqual(expectedState);
@@ -37,7 +37,7 @@ describe('stories reducer', () => {
             data: [1, 2, 3],
             page: 1,
             itemsPerPage: 10,
-            products: [],
+            products: {},
         };
 
         expect(reducer(undefined, action)).toEqual(expectedState);
@@ -55,7 +55,7 @@ describe('stories reducer', () => {
             data: [],
             page: 1,
             itemsPerPage: 10,
-            products: [],
+            products: {},
         };
 
         expect(reducer(undefined, action)).toEqual(expectedState);
@@ -72,7 +72,7 @@ describe('stories reducer', () => {
             data: [],
             page: 1,
             itemsPerPage: 10,
-            products: [],
+            products: {},
         };
 
         expect(reducer(undefined, action)).toEqual(expectedState);

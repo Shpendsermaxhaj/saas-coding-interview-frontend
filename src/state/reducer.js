@@ -13,7 +13,7 @@ const initialState = {
     data: [],
     page: 1,
     itemsPerPage: 10,
-    products: [],
+    products: {},
 };
 
 export default function reducer(state = initialState, action) {
